@@ -6,27 +6,37 @@ import {
 } from '@mui/material';
 import SolutionCard from './SolutionCard';
 
+const solutionStyle = {
+    title: {
+        margin: "0 auto",
+        display: "inline",
+        fontSize: "60px",
+        fontWeight: "700",
+        color: "#212121",
+        fontFamily: "'Fraunces', serif",
+        textAlign: "center",
+        lineHeight: "78px",
+    },
+    subTitle: {
+        marginTop: '20px',
+        lineHeight: "30px",
+        marginBottom: "10px",
+        fontFamily: "'Arimo', sans-serif",
+    }
+}
+
 const SolutionContainer = () => {
     return (
         <Box
             sx={{
-                textAlign: 'center'
+                paddingBottom: '120px'
             }}
         >
             <Box
-                sx={{marginBottom: '75px'}}
+                sx={{ marginBottom: '75px', textAlign: 'center' }}
             >
                 <Typography
-                    sx={{
-                        margin: "0 auto",
-                        display: "inline",
-                        fontSize: "60px",
-                        fontWeight: "700",
-                        color: "#212121",
-                        fontFamily: "'Fraunces', serif",
-                        textAlign: "center",
-                        lineHeight: "78px",
-                    }}
+                    sx={solutionStyle.title}
                 >
                     Singular&nbsp;
                     <span
@@ -48,12 +58,7 @@ const SolutionContainer = () => {
                     of your activities
                 </Typography>
                 <Typography
-                    sx={{
-                        marginTop: '20px',
-                        lineHeight: "30px",
-                        marginBottom: "10px",
-                        fontFamily: "'Arimo', sans-serif",
-                    }}
+                    sx={solutionStyle.subTitle}
                 >
                     You said I'd feel better if I just worked hard without lifting me up
                 </Typography>
